@@ -22,7 +22,7 @@ export default function Dashboard() {
       console.log("User Doesnt Exist!");
       navigate("/");
     }
-  }, []);
+  }, [user,navigate]);
 
   // Calculating Date
   function getFormattedDate(date) {

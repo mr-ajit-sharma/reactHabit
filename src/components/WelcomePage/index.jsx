@@ -29,7 +29,7 @@ const WelcomePage = () => {
     // Validating User Name
     const validateName = (e) => {
         console.log("VAlue:", e.target.value);
-        if (e.target.value == "") {
+        if (e.target.value === "") {
             console.log("User Name Cannot Be Empty!");
             return;
         }
@@ -42,7 +42,7 @@ const WelcomePage = () => {
     // Validating Gender
     const validateGender = (e) => {
         console.log("Gender:", e.target.value);
-        if (e.target.value == "") {
+        if (e.target.value === "") {
             console.log("User Gender Cannot Be Empty!");
             return;
         }

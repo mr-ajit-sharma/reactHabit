@@ -91,7 +91,7 @@ function App() {
     if (user && user.habitData) {
       addDates();
     }
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     if (user) {
@@ -99,7 +99,7 @@ function App() {
       console.log("Setting User to Local Storage!");
       dispatch(activeUser(user));
     }
-  }, [user]);
+  }, [user,dispatch]);
 
   return (
     <div className="App">

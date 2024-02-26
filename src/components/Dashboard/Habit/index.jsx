@@ -108,7 +108,7 @@ const Habit = ({ habit, index }) => {
       dispatch(activeUser(updatedUser));
       // localStorage.setItem("user", JSON.stringify(updatedUser));
     }
-  }, [statusChange, completedCount]);
+  }, [statusChange,dispatch,index,user,completedCount]);
   
   
 
@@ -128,7 +128,7 @@ const Habit = ({ habit, index }) => {
       setStatusChange("None")
 
     }
-  }, [])
+  }, [habit.habitCount,habit.prevRecord])
 
 
 
