@@ -91,7 +91,7 @@ function App() {
     if (user && user.habitData) {
       addDates();
     }
-  }, [user]);
+  }, [user,addDates()]);
 
   useEffect(() => {
     if (user) {

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./dashboard.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -15,8 +15,10 @@ export default function Dashboard() {
   let user = useSelector((state) => state.setUserData);
   const showPrevRecord = useSelector((state)=>state.handlePrevBox);
   let createBoxStatus = useSelector((state)=>state.handleCreateBox)
-  const [settingsBox, setSettingsBox] = useState(false);
-  const [statsBox, setStatsbox] = useState(false);
+  // const [settingsBox, setSettingsBox] = useState(false);
+  // const [statsBox, setStatsbox] = useState(false);
+  let settingsBox=false;
+  let statsBox=false;
   useEffect(() => {
     if (!user) {
       console.log("User Doesnt Exist!");
